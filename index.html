@@ -11,17 +11,17 @@
     :root{
       --bg:#0b1220;
       --panel:#0f1b33;
-      --panel2:#0c162c;
       --text:#e5e7eb;
       --muted:#a7b0c0;
       --accent:#38bdf8;
       --accent2:#a78bfa;
       --border:rgba(148,163,184,0.18);
-      --shadow: 0 12px 34px rgba(0,0,0,0.38);
+      --shadow: 0 14px 36px rgba(0,0,0,0.4);
     }
 
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
+
     body{
       margin:0;
       font-family:'Poppins',sans-serif;
@@ -31,10 +31,15 @@
         radial-gradient(800px 420px at 85% 15%, rgba(167,139,250,0.16), transparent 60%),
         var(--bg);
       line-height:1.6;
+      animation: fadeIn 0.8s ease;
     }
-    a{ color:inherit; }
 
-    /* NAVBAR */
+    @keyframes fadeIn{
+      from{ opacity:0; }
+      to{ opacity:1; }
+    }
+
+    /* NAV */
     .nav{
       position:sticky;
       top:0;
@@ -42,266 +47,260 @@
       backdrop-filter: blur(10px);
       background: rgba(11,18,32,0.65);
       border-bottom:1px solid var(--border);
+      animation: slideDown 0.6s ease;
     }
+    @keyframes slideDown{
+      from{ transform:translateY(-10px); opacity:0; }
+      to{ transform:translateY(0); opacity:1; }
+    }
+
     .nav-inner{
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 14px 20px;
+      max-width:1050px;
+      margin:auto;
+      padding:14px 20px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
     }
     .brand{
       font-weight:700;
-      letter-spacing:0.3px;
     }
-    .brand span{ color: var(--accent); }
-    .links a{
+    .brand span{ color:var(--accent); }
+    .nav a{
       text-decoration:none;
-      color: var(--muted);
-      margin-left: 14px;
-      font-size: 0.95rem;
+      color:var(--muted);
+      margin-left:14px;
+      font-size:.95rem;
+      transition: color .2s ease;
     }
-    .links a:hover{ color: var(--text); }
+    .nav a:hover{ color:var(--text); }
 
     .container{
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 28px 20px 80px;
+      max-width:1050px;
+      margin:auto;
+      padding:28px 20px 80px;
     }
 
     /* HERO */
     .hero{
-      margin-top: 22px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(56,189,248,0.16), rgba(167,139,250,0.10));
-      box-shadow: var(--shadow);
-      padding: 28px;
+      margin-top:22px;
+      padding:28px;
+      border-radius:18px;
+      background: linear-gradient(135deg, rgba(56,189,248,.16), rgba(167,139,250,.10));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      animation: riseUp 0.8s ease;
     }
+    @keyframes riseUp{
+      from{ transform:translateY(12px); opacity:0; }
+      to{ transform:translateY(0); opacity:1; }
+    }
+
     .badge{
       display:inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(15,27,51,0.75);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.92rem;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(15,27,51,.75);
+      border:1px solid var(--border);
+      color:var(--muted);
+      font-size:.92rem;
+      animation: fadeIn 1s ease;
     }
+
+    .profile-pic{
+      width:120px;
+      height:120px;
+      object-fit:cover;
+      border-radius:14px;
+      border:2px solid rgba(56,189,248,.45);
+      box-shadow:0 8px 22px rgba(0,0,0,.35);
+      margin:18px 0;
+      animation: popIn .9s ease;
+    }
+    @keyframes popIn{
+      from{ transform:scale(.9); opacity:0; }
+      to{ transform:scale(1); opacity:1; }
+    }
+
     .hero h1{
-      margin: 14px 0 10px;
-      font-size: 2.5rem;
-      line-height: 1.2;
+      margin:8px 0 10px;
+      font-size:2.4rem;
+      line-height:1.2;
     }
-    .hero h1 .name{ color: var(--accent); }
+    .hero h1 span{ color:var(--accent); }
+
     .hero p{
-      margin: 0 0 18px;
-      color: var(--muted);
-      max-width: 720px;
+      max-width:720px;
+      color:var(--muted);
+      animation: fadeIn 1.2s ease;
     }
 
     .btns{
       display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
     }
     .btn{
-      display:inline-block;
-      padding: 10px 14px;
-      border-radius: 12px;
+      padding:10px 14px;
+      border-radius:12px;
       text-decoration:none;
       font-weight:600;
-      border: 1px solid var(--border);
-      background: rgba(15,27,51,0.70);
-      transition: transform .15s ease;
+      border:1px solid var(--border);
+      background: rgba(15,27,51,.70);
+      color:var(--text);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover{ transform: translateY(-2px); }
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow:0 10px 26px rgba(0,0,0,.35);
+    }
     .btn.primary{
       border:none;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #08101f;
+      color:#08101f;
     }
 
     /* GRID */
     .grid{
       display:grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 18px;
-      margin-top: 18px;
+      grid-template-columns:1.3fr .7fr;
+      gap:18px;
+      margin-top:20px;
     }
-    @media (max-width: 920px){
-      .grid{ grid-template-columns: 1fr; }
-      .hero h1{ font-size: 2.1rem; }
+    @media(max-width:900px){
+      .grid{ grid-template-columns:1fr; }
+      .hero h1{ font-size:2.1rem; }
     }
 
     .card{
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(15,27,51,0.84), rgba(12,22,44,0.84));
-      box-shadow: var(--shadow);
-      padding: 22px;
+      padding:22px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(15,27,51,.85), rgba(12,22,44,.85));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      animation: riseUp .9s ease;
     }
-    .card h2{
+
+    h2{
       margin:0 0 12px;
-      font-size: 1.35rem;
+      font-size:1.35rem;
       display:flex;
       align-items:center;
       gap:10px;
     }
-    .card h2::before{
+    h2::before{
       content:"";
       width:10px;
       height:10px;
       border-radius:50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px rgba(56,189,248,0.55);
+      background:var(--accent);
+      box-shadow:0 0 16px rgba(56,189,248,.55);
     }
-    .muted{ color: var(--muted); }
 
-    /* Skills chips */
+    .muted{ color:var(--muted); }
+
     .chips{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top: 10px;
     }
     .chip{
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(2,6,23,0.30);
-      border: 1px solid rgba(56,189,248,0.30);
-      font-size: 0.95rem;
+      padding:10px 12px;
+      border-radius:999px;
+      background: rgba(2,6,23,.30);
+      border:1px solid rgba(56,189,248,.30);
+      font-size:.95rem;
+      transition: transform .2s ease;
     }
-
-    /* Project list */
-    .project{
-      margin-top: 12px;
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(148,163,184,0.18);
-      background: rgba(2,6,23,0.25);
-    }
-    .project h3{ margin:0 0 6px; font-size:1.05rem; }
-    .project p{ margin:0; color: var(--muted); }
-
-    /* Contact rows */
-    .row{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 10px;
-    }
-    .pill{
-      padding: 10px 12px;
-      border-radius: 12px;
-      border:1px solid var(--border);
-      background: rgba(15,27,51,0.60);
-      color: var(--muted);
-    }
-    .pill b{ color: var(--text); }
+    .chip:hover{ transform: translateY(-2px); }
 
     footer{
-      margin-top: 22px;
+      margin-top:24px;
+      padding-top:22px;
       text-align:center;
-      color: var(--muted);
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      animation: fadeIn 1.4s ease;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="nav">
-    <div class="nav-inner">
-      <div class="brand">Sai <span>Gopinadh</span></div>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
+<div class="nav">
+  <div class="nav-inner">
+    <div class="brand">Sai <span>Gopinadh</span></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <section class="hero">
-      <span class="badge">Aspiring Software Developer • Java • React</span>
-      <h1>Hi, I’m <span class="name">Sai Gopinadh Devineni</span></h1>
-      <p>
-        IT graduate focused on modern web development. I’m improving my skills in
-        Java, JavaScript, React, HTML, CSS, and SQL by building hands-on projects.
+  <section class="hero">
+    <span class="badge">Aspiring Software Developer • Java • React</span>
+
+    <!-- PROFILE IMAGE -->
+    <img src="profile_small.jpg" alt="Sai Gopinadh Devineni" class="profile-pic" />
+
+    <h1>Hi, I’m <span>Sai Gopinadh Devineni</span></h1>
+    <p>
+      IT graduate focused on modern web development. I’m improving my skills in
+      Java, JavaScript, React, HTML, CSS, and SQL through hands-on projects.
+    </p>
+
+    <div class="btns">
+      <a class="btn primary" href="Sai_Gopinadh_Devineni_Resume.pdf" download>Download Resume</a>
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card" id="about">
+      <h2>About Me</h2>
+      <p class="muted">
+        I am an IT graduate with a strong interest in software development and web technologies.
+        I am a quick learner with good analytical skills and a strong passion for building
+        clean, user-friendly applications.
       </p>
-
-      <div class="btns">
-        <a class="btn primary" href="Sai_Gopinadh_Devineni_Resume.pdf" download>Download Resume</a>
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="#contact">Contact Me</a>
-      </div>
     </section>
 
-    <div class="grid">
-      <section class="card" id="about">
-        <h2>About Me</h2>
-        <p class="muted">
-          I am an IT graduate with a strong interest in software development and web technologies.
-          I am currently enhancing my skills in Java, JavaScript, React, HTML, and CSS through hands-on projects.
-          I am a quick learner with strong analytical skills and a growth mindset, looking for an entry-level role
-          to start my IT career and contribute to real-world projects.
-        </p>
-      </section>
-
-      <section class="card" id="skills">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span class="chip">Java</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">React</span>
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Python</span>
-        </div>
-      </section>
-    </div>
-
-    <section class="card" id="projects" style="margin-top:18px;">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio built with HTML & CSS and deployed on GitHub Pages.</p>
-      </div>
-
-      <div class="project">
-        <h3>Project (Coming Soon)</h3>
-        <p>Add a React app / Java mini project / SQL dashboard here.</p>
+    <section class="card" id="skills">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
       </div>
     </section>
-
-    <section class="card" id="contact" style="margin-top:18px;">
-      <h2>Contact</h2>
-      <div class="row">
-        <div class="pill">Email: <b>saigopinadhdevineni@gmail.com</b></div>
-        <div class="pill">Phone: <b>+1 7746064800</b></div>
-      </div>
-
-      <!-- Optional: add your real links -->
-      <!--
-      <div class="row">
-        <div class="pill">GitHub: <b>https://github.com/saigopinadhdevineni</b></div>
-        <div class="pill">LinkedIn: <b>https://linkedin.com/in/yourprofile</b></div>
-      </div>
-      -->
-    </section>
-
-    <footer>
-      © 2025 Sai Gopinadh Devineni • Dark Theme Portfolio
-    </footer>
-
   </div>
+
+  <section class="card" id="projects" style="margin-top:18px;">
+    <h2>Projects</h2>
+    <p class="muted">Projects will be added soon.</p>
+  </section>
+
+  <section class="card" id="contact" style="margin-top:18px;">
+    <h2>Contact</h2>
+    <p class="muted">Email: <b style="color:#e5e7eb;">saigopinadhdevineni@gmail.com</b></p>
+    <p class="muted">Phone: <b style="color:#e5e7eb;">+1 7746064800</b></p>
+  </section>
+
+  <footer>
+    © 2025 Sai Gopinadh Devineni • Portfolio
+  </footer>
+
+</div>
+
 </body>
 </html>
