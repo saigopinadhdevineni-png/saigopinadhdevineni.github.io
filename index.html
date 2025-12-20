@@ -3,98 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Gopinadh Devineni | Portfolio</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-}
-
-<title>Sai Gopinadh Devineni | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --card2:#0c162c;
+      --text:#e5e7eb;
+      --muted:#a7b0c0;
+      --accent:#38bdf8;
+      --accent2:#a78bfa;
+      --border:rgba(148,163,184,0.18);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #020617, #020617);
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: radial-gradient(900px 450px at 20% 10%, rgba(56,189,248,0.20), transparent 60%),
+                  radial-gradient(800px 420px at 80% 15%, rgba(167,139,250,0.18), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+
+    /* Navbar */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.65);
+      border-bottom:1px solid var(--border);
     }
-    header p {
-      font-size: 1.2rem;
-      color: #94a3b8;
+    .nav-inner{
+      max-width: 1000px;
+      margin:auto;
+      padding: 14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
     }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
+    .brand{
+      font-weight:700;
+      letter-spacing:0.5px;
     }
-    h2 {
-      font-size: 2rem;
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-      margin-bottom: 20px;
+    .brand span{ color:var(--accent); }
+    .nav a{
+      color: var(--muted);
+      text-decoration:none;
+      margin-left:14px;
+      font-size: 0.95rem;
     }
-    .skills span {
-      display: inline-block;
-      background: #020617;
-      border: 1px solid #38bdf8;
-      padding: 10px 15px;
-      border-radius: 20px;
-      margin: 8px;
+    .nav a:hover{ color: var(--text); }
+
+    /* Layout */
+    .container{
+      max-width: 1000px;
+      margin:auto;
+      padding: 26px 20px 70px;
     }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
+
+    /* Hero */
+    .hero{
+      margin-top: 22px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.16), rgba(167,139,250,0.12));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap: wrap;
+    }
+    .hero-left{
+      flex: 1 1 420px;
+      min-width: 280px;
+    }
+    .tag{
+      display:inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(15,27,51,0.8);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hero h1{
+      margin: 14px 0 10px;
+      font-size: 2.3rem;
+      line-height:1.2;
+    }
+    .hero h1 .name-accent{ color: var(--accent); }
+    .hero p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 560px;
+    }
+    .btns{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+    .btn{
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight:600;
+      border: 1px solid var(--border);
+      background: rgba(15,27,51,0.75);
+      color: var(--text);
+      transition: transform .15s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); }
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #08101f;
+    }
+
+    /* Profile photo (Square) */
+    .hero-right{
+      flex: 0 0 auto;
+    }
+    .profile-pic{
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid rgba(56,189,248,0.45);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* Sections */
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(15,27,51,0.85), rgba(12,22,44,0.85));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    h2{
+      margin:0 0 12px;
+      font-size: 1.4rem;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    h2:before{
+      content:"";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(56,189,248,0.55);
+    }
+    .muted{ color: var(--muted); }
+
+    /* Skills chips */
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 8px;
+    }
+    .chip{
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(2,6,23,0.35);
+      border: 1px solid rgba(56,189,248,0.35);
+      font-size: 0.95rem;
+    }
+
+    /* Projects */
+    .project{
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.18);
+      background: rgba(2,6,23,0.25);
+      margin-top: 12px;
+    }
+    .project h3{
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+    .project p{ margin:0; color: var(--muted); }
+
+    /* Footer */
+    footer{
+      margin-top: 22px;
+      text-align:center;
+      color: var(--muted);
+      padding: 22px 0 0;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
+
 <body>
 
-<header> <h1>Sai Gopinadh Devineni</h1>
-  <p>Aspiring Software Developer</p>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-I am an IT graduate with a strong interest in software development and web technologies.
-I am currently enhancing my skills in Java, JavaScript, React, HTML, and CSS by working on hands-on projects and real-world examples.
-I am a quick learner with good analytical skills and a positive attitude toward challenges. My goal is to start my career in the IT industry, gain professional experience, and grow into a skilled software engineer.
-  </p>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Java</span>
-    <span>React</span>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">Sai <span>Gopinadh</span></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Projects</h2>
-  <p>Projects will be added soon.</p>
-</section>
+  <div class="container">
 
-<section>
-  <h2>Contact</h2>
-  <p>Email:saigopinadhdevineni@gmail.com</p>
-  <p>Contact:+1 7746064800</p>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <span class="tag">Aspiring Software Developer • Java • React</span>
+        <h1>Hi, I’m <span class="name-accent">Sai Gopinadh Devineni</span></h1>
+        <p>
+          IT graduate focused on building modern web applications. I’m improving my skills in
+          Java, JavaScript, React, HTML, CSS, SQL and creating hands-on projects.
+        </p>
 
-<footer>
-  © 2025 Sai Gopinadh Devineni
-</footer>
+        <div class="btns">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
 
+      <div class="hero-right">
+        <!-- Upload your image into repo and name it: profile.jpg -->
+        <img src="profile.jpg" alt="Sai Gopinadh Devineni" class="profile-pic" />
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- ABOUT -->
+      <section class="card" id="about">
+        <h2>About Me</h2>
+        <p class="muted">
+          I am an IT graduate with a strong interest in software development and web technologies.
+          I am currently enhancing my skills in Java, JavaScript, React, HTML, and CSS by working on
+          hands-on projects and real-world examples. I am a quick learner with good analytical skills and
+          a positive attitude toward challenges. My goal is to start my career in the IT industry, gain
+          professional experience, and grow into a skilled software engineer.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="card" id="skills">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Python</span>
+        </div>
+        <p class="muted" style="margin-top:12px;">
+          I enjoy building responsive UIs and improving problem-solving skills through projects.
+        </p>
+      </section>
+    </div>
+
+    <!-- PROJECTS -->
+    <section class="card" id="projects" style="margin-top:18px;">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio built with HTML, CSS and hosted on GitHub Pages.</p>
+      </div>
+
+      <div class="project">
+        <h3>Project 2 (Coming Soon)</h3>
+        <p>Add your next project here (React app / Java mini project / SQL project).</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="card" id="contact" style="margin-top:18px;">
+      <h2>Contact</h2>
+      <p class="muted">Email: <b style="color:#e5e7eb;">saigopinadhdevineni@gmail.com</b></p>
+      <p class="muted">Phone: <b style="color:#e5e7eb;">+1 7746064800</b></p>
+
+      <!-- Optional: add LinkedIn / GitHub links -->
+      <!--
+      <p class="muted">LinkedIn: <a href="https://linkedin.com/in/yourname" class="muted">yourname</a></p>
+      <p class="muted">GitHub: <a href="https://github.com/saigopinadhdevineni" class="muted">saigopinadhdevineni</a></p>
+      -->
+    </section>
+
+    <footer>
+      © 2025 Sai Gopinadh Devineni • Built with HTML & CSS
+    </footer>
+
+  </div>
 </body>
 </html>
+
