@@ -79,14 +79,8 @@
       align-items:center;
       flex-wrap:wrap;
     }
-
-    .hero-left{
-      flex:1 1 500px;
-    }
-
-    .hero-right{
-      flex:0 0 auto;
-    }
+    .hero-left{ flex:1 1 500px; }
+    .hero-right{ flex:0 0 auto; }
 
     .badge{
       display:inline-block;
@@ -135,7 +129,6 @@
       color:#08101f;
     }
 
-    /* GRID */
     .grid{
       display:grid;
       grid-template-columns:1.3fr .7fr;
@@ -154,21 +147,27 @@
       border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
-    h2{
-      margin:0 0 12px;
-      font-size:1.35rem;
-    }
+    h2{ margin:0 0 12px; font-size:1.35rem; }
     .muted{ color:var(--muted); }
 
     /* PROJECTS */
     .project{
-      margin-top:12px;
-      padding:14px;
+      margin-top:14px;
+      padding:16px;
       border-radius:14px;
       border:1px solid rgba(148,163,184,0.18);
       background: rgba(2,6,23,0.25);
     }
     .project h3{ margin:0 0 6px; }
+    .project a{
+      display:inline-block;
+      margin-top:6px;
+      color:var(--accent);
+      font-weight:600;
+      text-decoration:none;
+      font-size:.95rem;
+    }
+    .project a:hover{ text-decoration:underline; }
 
     footer{
       margin-top:24px;
@@ -196,14 +195,13 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-left">
       <span class="badge">Aspiring Java Developer • Web Developer</span>
       <h1>Hi, I’m <span>Sai Gopinadh Devineni</span></h1>
       <p>
         Entry-level Java Developer with strong fundamentals in Java, JavaScript,
-        HTML, CSS, React, and SQL. Passionate about building clean applications.
+        HTML, CSS, React, and SQL.
       </p>
 
       <div class="btns">
@@ -218,40 +216,25 @@
     </div>
   </section>
 
-  <div class="grid">
-    <section class="card" id="about">
-      <h2>About Me</h2>
-      <p class="muted">
-        I am an IT graduate with a strong interest in Java and software development.
-        I enjoy solving problems and building applications using modern technologies.
-      </p>
-    </section>
-
-    <section class="card" id="skills">
-      <h2>Skills</h2>
-      <p class="muted">
-        Java, JavaScript, HTML, CSS, React, SQL, Python, GitHub
-      </p>
-    </section>
-  </div>
-
-  <!-- PROJECTS -->
   <section class="card" id="projects" style="margin-top:18px;">
     <h2>Projects</h2>
 
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>Designed and developed a responsive personal website using HTML and CSS, deployed on GitHub Pages.</p>
+      <p>Responsive personal website built using HTML and CSS and deployed on GitHub Pages.</p>
+      <a href="https://github.com/saigopinadhdevineni/portfolio-website" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Number Checker App</h3>
       <p>JavaScript application to check even/odd and positive/negative numbers.</p>
+      <a href="https://github.com/saigopinadhdevineni/number-checker-app" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>To-Do List App</h3>
       <p>Simple task management app built using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/saigopinadhdevineni/todo-list-app" target="_blank">View on GitHub →</a>
     </div>
   </section>
 
