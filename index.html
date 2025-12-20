@@ -74,7 +74,20 @@
       background: linear-gradient(135deg, rgba(56,189,248,.16), rgba(167,139,250,.10));
       border:1px solid var(--border);
       box-shadow:var(--shadow);
+      display:flex;
+      gap:30px;
+      align-items:center;
+      flex-wrap:wrap;
     }
+
+    .hero-left{
+      flex:1 1 500px;
+    }
+
+    .hero-right{
+      flex:0 0 auto;
+    }
+
     .badge{
       display:inline-block;
       padding:8px 12px;
@@ -84,6 +97,16 @@
       color:var(--muted);
       font-size:.92rem;
     }
+
+    .profile-pic{
+      width:130px;
+      height:130px;
+      object-fit:cover;
+      border-radius:16px;
+      border:2px solid rgba(56,189,248,.45);
+      box-shadow:0 8px 22px rgba(0,0,0,.35);
+    }
+
     .hero h1{
       margin:14px 0 10px;
       font-size:2.4rem;
@@ -121,6 +144,7 @@
     }
     @media(max-width:900px){
       .grid{ grid-template-columns:1fr; }
+      .hero{ flex-direction:column; }
     }
 
     .card{
@@ -172,18 +196,25 @@
 
 <div class="container">
 
+  <!-- HERO -->
   <section class="hero">
-    <span class="badge">Aspiring Java Developer • Web Developer</span>
-    <h1>Hi, I’m <span>Sai Gopinadh Devineni</span></h1>
-    <p>
-      Entry-level Java Developer with strong fundamentals in Java, JavaScript,
-      HTML, CSS, React, and SQL. Passionate about building clean and user-friendly applications.
-    </p>
+    <div class="hero-left">
+      <span class="badge">Aspiring Java Developer • Web Developer</span>
+      <h1>Hi, I’m <span>Sai Gopinadh Devineni</span></h1>
+      <p>
+        Entry-level Java Developer with strong fundamentals in Java, JavaScript,
+        HTML, CSS, React, and SQL. Passionate about building clean applications.
+      </p>
 
-    <div class="btns">
-      <a class="btn primary" href="Sai_Gopinadh_Devineni_Resume.pdf" download>Download Resume</a>
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn" href="#contact">Contact Me</a>
+      <div class="btns">
+        <a class="btn primary" href="Sai_Gopinadh_Devineni_Resume.pdf" download>Download Resume</a>
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="profile_small.jpg" alt="Sai Gopinadh Devineni" class="profile-pic">
     </div>
   </section>
 
@@ -204,9 +235,14 @@
     </section>
   </div>
 
-  <!-- PROJECTS SECTION (UPDATED) -->
+  <!-- PROJECTS -->
   <section class="card" id="projects" style="margin-top:18px;">
     <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Designed and developed a responsive personal website using HTML and CSS, deployed on GitHub Pages.</p>
+    </div>
 
     <div class="project">
       <h3>Number Checker App</h3>
@@ -233,4 +269,3 @@
 
 </body>
 </html>
-
