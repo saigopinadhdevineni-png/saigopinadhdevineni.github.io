@@ -31,12 +31,6 @@
         radial-gradient(800px 420px at 85% 15%, rgba(167,139,250,0.16), transparent 60%),
         var(--bg);
       line-height:1.6;
-      animation: fadeIn 0.8s ease;
-    }
-
-    @keyframes fadeIn{
-      from{ opacity:0; }
-      to{ opacity:1; }
     }
 
     /* NAV */
@@ -47,13 +41,7 @@
       backdrop-filter: blur(10px);
       background: rgba(11,18,32,0.65);
       border-bottom:1px solid var(--border);
-      animation: slideDown 0.6s ease;
     }
-    @keyframes slideDown{
-      from{ transform:translateY(-10px); opacity:0; }
-      to{ transform:translateY(0); opacity:1; }
-    }
-
     .nav-inner{
       max-width:1050px;
       margin:auto;
@@ -62,16 +50,13 @@
       align-items:center;
       justify-content:space-between;
     }
-    .brand{
-      font-weight:700;
-    }
+    .brand{ font-weight:700; }
     .brand span{ color:var(--accent); }
     .nav a{
       text-decoration:none;
       color:var(--muted);
       margin-left:14px;
       font-size:.95rem;
-      transition: color .2s ease;
     }
     .nav a:hover{ color:var(--text); }
 
@@ -89,13 +74,7 @@
       background: linear-gradient(135deg, rgba(56,189,248,.16), rgba(167,139,250,.10));
       border:1px solid var(--border);
       box-shadow:var(--shadow);
-      animation: riseUp 0.8s ease;
     }
-    @keyframes riseUp{
-      from{ transform:translateY(12px); opacity:0; }
-      to{ transform:translateY(0); opacity:1; }
-    }
-
     .badge{
       display:inline-block;
       padding:8px 12px;
@@ -104,36 +83,13 @@
       border:1px solid var(--border);
       color:var(--muted);
       font-size:.92rem;
-      animation: fadeIn 1s ease;
     }
-
-    .profile-pic{
-      width:120px;
-      height:120px;
-      object-fit:cover;
-      border-radius:14px;
-      border:2px solid rgba(56,189,248,.45);
-      box-shadow:0 8px 22px rgba(0,0,0,.35);
-      margin:18px 0;
-      animation: popIn .9s ease;
-    }
-    @keyframes popIn{
-      from{ transform:scale(.9); opacity:0; }
-      to{ transform:scale(1); opacity:1; }
-    }
-
     .hero h1{
-      margin:8px 0 10px;
+      margin:14px 0 10px;
       font-size:2.4rem;
-      line-height:1.2;
     }
     .hero h1 span{ color:var(--accent); }
-
-    .hero p{
-      max-width:720px;
-      color:var(--muted);
-      animation: fadeIn 1.2s ease;
-    }
+    .hero p{ color:var(--muted); max-width:720px; }
 
     .btns{
       display:flex;
@@ -149,11 +105,6 @@
       border:1px solid var(--border);
       background: rgba(15,27,51,.70);
       color:var(--text);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover{
-      transform: translateY(-2px);
-      box-shadow:0 10px 26px rgba(0,0,0,.35);
     }
     .btn.primary{
       border:none;
@@ -170,7 +121,6 @@
     }
     @media(max-width:900px){
       .grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:2.1rem; }
     }
 
     .card{
@@ -179,41 +129,22 @@
       background: linear-gradient(180deg, rgba(15,27,51,.85), rgba(12,22,44,.85));
       border:1px solid var(--border);
       box-shadow:var(--shadow);
-      animation: riseUp .9s ease;
     }
-
     h2{
       margin:0 0 12px;
       font-size:1.35rem;
-      display:flex;
-      align-items:center;
-      gap:10px;
     }
-    h2::before{
-      content:"";
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--accent);
-      box-shadow:0 0 16px rgba(56,189,248,.55);
-    }
-
     .muted{ color:var(--muted); }
 
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+    /* PROJECTS */
+    .project{
+      margin-top:12px;
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(148,163,184,0.18);
+      background: rgba(2,6,23,0.25);
     }
-    .chip{
-      padding:10px 12px;
-      border-radius:999px;
-      background: rgba(2,6,23,.30);
-      border:1px solid rgba(56,189,248,.30);
-      font-size:.95rem;
-      transition: transform .2s ease;
-    }
-    .chip:hover{ transform: translateY(-2px); }
+    .project h3{ margin:0 0 6px; }
 
     footer{
       margin-top:24px;
@@ -221,7 +152,6 @@
       text-align:center;
       color:var(--muted);
       border-top:1px solid var(--border);
-      animation: fadeIn 1.4s ease;
     }
   </style>
 </head>
@@ -243,15 +173,11 @@
 <div class="container">
 
   <section class="hero">
-    <span class="badge">Aspiring Software Developer • Java • React</span>
-
-    <!-- PROFILE IMAGE -->
-    <img src="profile_small.jpg" alt="Sai Gopinadh Devineni" class="profile-pic" />
-
+    <span class="badge">Aspiring Java Developer • Web Developer</span>
     <h1>Hi, I’m <span>Sai Gopinadh Devineni</span></h1>
     <p>
-      IT graduate focused on modern web development. I’m improving my skills in
-      Java, JavaScript, React, HTML, CSS, and SQL through hands-on projects.
+      Entry-level Java Developer with strong fundamentals in Java, JavaScript,
+      HTML, CSS, React, and SQL. Passionate about building clean and user-friendly applications.
     </p>
 
     <div class="btns">
@@ -265,29 +191,32 @@
     <section class="card" id="about">
       <h2>About Me</h2>
       <p class="muted">
-        I am an IT graduate with a strong interest in software development and web technologies.
-        I am a quick learner with good analytical skills and a strong passion for building
-        clean, user-friendly applications.
+        I am an IT graduate with a strong interest in Java and software development.
+        I enjoy solving problems and building applications using modern technologies.
       </p>
     </section>
 
     <section class="card" id="skills">
       <h2>Skills</h2>
-      <div class="chips">
-        <span class="chip">Java</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">React</span>
-        <span class="chip">HTML</span>
-        <span class="chip">CSS</span>
-        <span class="chip">SQL</span>
-        <span class="chip">Python</span>
-      </div>
+      <p class="muted">
+        Java, JavaScript, HTML, CSS, React, SQL, Python, GitHub
+      </p>
     </section>
   </div>
 
+  <!-- PROJECTS SECTION (UPDATED) -->
   <section class="card" id="projects" style="margin-top:18px;">
     <h2>Projects</h2>
-    <p class="muted">Projects will be added soon.</p>
+
+    <div class="project">
+      <h3>Number Checker App</h3>
+      <p>JavaScript application to check even/odd and positive/negative numbers.</p>
+    </div>
+
+    <div class="project">
+      <h3>To-Do List App</h3>
+      <p>Simple task management app built using HTML, CSS, and JavaScript.</p>
+    </div>
   </section>
 
   <section class="card" id="contact" style="margin-top:18px;">
@@ -297,10 +226,11 @@
   </section>
 
   <footer>
-    © 2025 Sai Gopinadh Devineni • Portfolio
+    © 2025 Sai Gopinadh Devineni
   </footer>
 
 </div>
 
 </body>
 </html>
+
