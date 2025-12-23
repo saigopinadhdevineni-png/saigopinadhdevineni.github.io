@@ -3,330 +3,288 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sai Gopinadh Devineni — Software Engineer | IT Support | Business Analyst. Master's graduate on OPT. Projects, experience, and contact." />
-  <meta name="theme-color" content="#0b1220" />
-  <title>Sai Gopinadh Devineni | FAANG-style Portfolio</title>
-
-  <meta property="og:title" content="Sai Gopinadh Devineni | Portfolio" />
-  <meta property="og:description" content="Software Engineer | IT Support | Business Analyst — Master's (OPT). Projects, impact, and contact." />
-  <meta property="og:type" content="website" />
+  <title>Sai Gopinadh Devineni | Portfolio</title>
 
   <style>
     :root{
-      --bg: #0b1220;
-      --panel: rgba(255,255,255,0.06);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.70);
-      --border: rgba(255,255,255,0.14);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --accent: #6ee7ff;
-      --accent2: #a78bfa;
-      --chip: rgba(110,231,255,0.12);
-      --chip2: rgba(167,139,250,0.12);
-      --radius: 16px;
-      --radius2: 22px;
-      --maxw: 1120px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --ring: 0 0 0 4px rgba(110,231,255,0.18);
+      --bg:#0b1220;
+      --panel:rgba(255,255,255,0.06);
+      --text:#ffffff;
+      --muted:#b6c2d1;
+      --border:rgba(255,255,255,0.15);
+      --accent:#6ee7ff;
+      --radius:18px;
+      --maxw:1100px;
+      --shadow:0 10px 30px rgba(0,0,0,0.4);
     }
-    [data-theme="light"]{
-      --bg: #f7f8fb;
-      --panel: rgba(10, 37, 64, 0.05);
-      --text: rgba(10, 16, 28, 0.92);
-      --muted: rgba(10, 16, 28, 0.70);
-      --border: rgba(10, 16, 28, 0.12);
-      --shadow: 0 14px 34px rgba(10,16,28,0.12);
-      --chip: rgba(30,144,255,0.10);
-      --chip2: rgba(124,58,237,0.10);
-      --ring: 0 0 0 4px rgba(30,144,255,0.16);
-    }
+
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: var(--sans);
-      background: radial-gradient(1200px 700px at 10% 10%, rgba(110,231,255,0.12), transparent 60%),
-                  radial-gradient(1000px 600px at 90% 20%, rgba(167,139,250,0.14), transparent 60%),
-                  radial-gradient(900px 600px at 50% 100%, rgba(52,211,153,0.08), transparent 60%),
-                  var(--bg);
-      color: var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);
+      color:var(--text);
     }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--maxw); margin:0 auto; padding: 0 20px;}
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
 
     /* NAV */
-    .navWrap{
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(11,18,32,0.78), rgba(11,18,32,0.44));
-      border-bottom: 1px solid var(--border);
+    .nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(11,18,32,0.9);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
     }
-    [data-theme="light"] .navWrap{
-      background: linear-gradient(to bottom, rgba(247,248,251,0.90), rgba(247,248,251,0.60));
+    .navInner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
     }
-    .nav{display:flex; align-items:center; justify-content:space-between; padding: 14px 0; gap: 12px;}
-    .brand{display:flex; align-items:center; gap: 10px; font-weight:700; letter-spacing:0.2px;}
-    .logo{
-      width: 34px; height: 34px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 10px 18px rgba(110,231,255,0.14);
-      position: relative;
-    }
-    .logo::after{
-      content:""; position:absolute; inset:2px; border-radius: 10px;
-      background: rgba(0,0,0,0.20); mix-blend-mode: overlay;
-    }
-    .navlinks{display:flex; align-items:center; gap: 14px; flex-wrap: wrap; justify-content:flex-end;}
-    .navlinks a{color: var(--muted); font-size: 14px; padding: 8px 10px; border-radius: 12px; border: 1px solid transparent;}
-    .navlinks a:hover{color:var(--text); border-color: var(--border); background: var(--panel);}
-    .navRight{display:flex; align-items:center; gap: 10px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap: 10px;
-      padding: 10px 14px; border-radius: 14px; border: 1px solid var(--border);
-      background: var(--panel); color: var(--text); font-weight: 600; cursor:pointer;
-      transition: transform 0.12s ease, border-color 0.12s ease;
-      font-size: 14px;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(110,231,255,0.30);}
-    .btnPrimary{border-color: rgba(110,231,255,0.35); background: linear-gradient(135deg, rgba(110,231,255,0.20), rgba(167,139,250,0.18));}
-    .btnIcon{width: 40px; height: 40px; padding: 0; border-radius: 14px;}
 
-    /* HERO */
-    .hero{padding: 54px 0 20px;}
-    .heroGrid{display:grid; grid-template-columns: 1.6fr 1fr; gap: 22px; align-items: stretch;}
-    @media (max-width: 920px){.heroGrid{grid-template-columns: 1fr;}}
-    .card{background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius2); box-shadow: var(--shadow);}
-    .heroLeft{padding: 28px; position: relative; overflow:hidden;}
-    .heroTop{position:relative; display:flex; flex-direction:column; gap: 12px;}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+    }
 
-    /* ✅ PROFILE PHOTO */
-    .profileRow{display:flex; align-items:center; gap: 14px; flex-wrap:wrap;}
+    /* PROFILE IMAGE TOP LEFT */
     .avatar{
-      width: 84px; height: 84px;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.06);
+      width:48px;
+      height:48px;
+      border-radius:14px;
       overflow:hidden;
-      flex: 0 0 auto;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
     }
     .avatar img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
-    .nameBlock{display:flex; flex-direction:column; gap: 4px;}
-    .nameBlock .small{color: var(--muted); font-size: 13px; font-family: var(--mono);}
 
-    .kicker{
-      display:inline-flex; align-items:center; gap: 10px;
-      font-family: var(--mono); font-size: 12px; color: var(--muted);
-      background: rgba(110,231,255,0.10);
-      border: 1px solid rgba(110,231,255,0.22);
-      padding: 8px 12px; border-radius: 999px; width: fit-content;
+    .navLinks{
+      display:flex;
+      gap:16px;
+      font-size:14px;
     }
-    .dot{width:8px; height:8px; border-radius:50%; background: #34d399; box-shadow: 0 0 0 4px rgba(52,211,153,0.15);}
-    h1{margin: 0; font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.6px; line-height: 1.08;}
-    .subtitle{margin: 0; color: var(--muted); font-size: 16px; max-width: 70ch;}
-    .heroActions{display:flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;}
-    .pillRow{display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;}
-    .pill{padding: 8px 10px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.05); font-size: 13px; color: var(--muted);}
+    .navLinks a{color:var(--muted)}
+    .navLinks a:hover{color:var(--text)}
 
-    .heroRight{padding: 22px; display:flex; flex-direction:column; gap: 14px;}
-    .miniTitle{font-weight: 800; letter-spacing: -0.3px; margin:0; font-size: 16px;}
-    .stats{display:grid; grid-template-columns: 1fr 1fr; gap: 12px;}
-    .stat{padding: 14px; border-radius: var(--radius); border: 1px solid var(--border); background: rgba(255,255,255,0.04);}
-    .stat .num{font-size: 20px; font-weight: 900; letter-spacing: -0.4px; margin-bottom: 4px;}
-    .stat .lbl{color: var(--muted); font-size: 13px;}
-    .quick{display:flex; flex-direction:column; gap: 10px; margin-top: 2px;}
-    .quick a{display:flex; justify-content:space-between; align-items:center; padding: 12px 14px; border-radius: var(--radius); border: 1px solid var(--border); background: rgba(255,255,255,0.04); font-weight: 650;}
-    .quick span{color: var(--muted); font-weight: 600; font-size: 13px;}
+    .btn{
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:var(--panel);
+      font-weight:600;
+    }
 
-    section{padding: 26px 0;}
-    .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap: 12px; margin: 12px 0 14px;}
-    h2{margin:0; font-size: 22px; letter-spacing: -0.4px;}
-    .sectionNote{color: var(--muted); font-size: 14px; margin:0; max-width: 62ch;}
+    /* HERO */
+    .hero{
+      padding:70px 0 40px;
+    }
+    .heroCard{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:40px;
+      box-shadow:var(--shadow);
+    }
 
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap: 14px;}
-    @media (max-width: 860px){.grid2{grid-template-columns: 1fr;}}
-    .panel{padding: 18px; border-radius: var(--radius2); border: 1px solid var(--border); background: rgba(255,255,255,0.04);}
-    .sep{height: 1px; background: var(--border); margin: 18px 0;}
+    h1{
+      font-size:42px;
+      margin:0 0 12px;
+      line-height:1.1;
+    }
+    .subtitle{
+      color:var(--muted);
+      max-width:700px;
+      font-size:16px;
+    }
 
-    .chips{display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px;}
-    .chip{font-size: 13px; padding: 8px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--chip);}
-    .chip.alt{background: var(--chip2);}
+    .actions{
+      margin-top:20px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
 
-    .projGrid{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
-    @media (max-width: 1000px){.projGrid{grid-template-columns: 1fr 1fr;}}
-    @media (max-width: 700px){.projGrid{grid-template-columns: 1fr;}}
-    .proj{padding: 18px; border-radius: var(--radius2); border: 1px solid var(--border); background: rgba(255,255,255,0.04);}
-    .projTop{display:flex; align-items:flex-start; justify-content:space-between; gap: 10px; margin-bottom: 8px;}
-    .badge{font-size: 12px; font-family: var(--mono); color: var(--muted); border: 1px solid var(--border); background: rgba(255,255,255,0.05); padding: 6px 10px; border-radius: 999px; white-space:nowrap;}
-    .proj h3{margin:0; font-size: 16px;}
-    .proj p{margin: 8px 0 12px; color: var(--muted); font-size: 14px; line-height: 1.5;}
-    .projLinks{display:flex; gap: 10px; flex-wrap:wrap;}
-    .link{font-weight: 700; font-size: 13px; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.04);}
+    section{padding:50px 0}
+    h2{margin-bottom:14px}
 
-    .timeline{display:flex; flex-direction:column; gap: 12px;}
-    .role{padding: 18px; border-radius: var(--radius2); border: 1px solid var(--border); background: rgba(255,255,255,0.04);}
-    .roleHead{display:flex; justify-content:space-between; align-items:flex-start; gap: 10px; margin-bottom: 10px;}
-    .roleTitle{margin:0; font-size: 16px; font-weight: 850;}
-    .roleMeta{margin: 4px 0 0; color: var(--muted); font-size: 13px;}
-    .roleTime{font-family: var(--mono); color: var(--muted); font-size: 12px; white-space:nowrap;}
-    ul{margin: 10px 0 0 18px; color: var(--muted);}
-    li{margin: 7px 0; line-height: 1.5;}
-    .impact{display:inline-flex; align-items:center; gap: 8px; font-family: var(--mono); font-size: 12px; color: rgba(52,211,153,0.95); background: rgba(52,211,153,0.10); border: 1px solid rgba(52,211,153,0.22); padding: 6px 10px; border-radius: 999px; margin-top: 8px;}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    @media(max-width:800px){
+      .grid2{grid-template-columns:1fr}
+    }
 
-    .footer{padding: 34px 0 42px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 20px;}
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    ul{margin:0 0 0 18px;color:var(--muted)}
+    li{margin:8px 0}
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:30px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="navWrap">
-    <div class="container">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#top">
-          <span class="logo" aria-hidden="true"></span>
-          <span>Sai Gopinadh Devineni</span>
-        </a>
 
-        <div class="navlinks">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-        </div>
+<!-- NAV -->
+<div class="nav">
+  <div class="container navInner">
+    <div class="brand">
+      <div class="avatar">
+        <img src="profile_small.jpg" alt="Sai Gopinadh Devineni">
+      </div>
+      Sai Gopinadh Devineni
+    </div>
 
-        <div class="navRight">
-          <button class="btn btnIcon" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-            <span id="themeIcon" aria-hidden="true">🌙</span>
-          </button>
-          <a class="btn btnPrimary" href="resume.pdf" download>⬇️ Resume</a>
-        </div>
-      </nav>
+    <div class="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="btn" href="resume.pdf" download>⬇ Resume</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="heroCard">
+      <h1>Software Engineer & Support Analyst</h1>
+      <p class="subtitle">
+        Master’s graduate on OPT with Amazon experience.  
+        Focused on building clean, practical applications and solving real-world problems.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/sai-gopinadh" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/saigopinadhdevineni-png" target="_blank">GitHub</a>
+      </div>
     </div>
   </div>
+</section>
 
-  <main id="top" class="hero">
-    <div class="container">
-      <div class="heroGrid">
-        <div class="card heroLeft">
-          <div class="heroTop">
-
-            <!-- ✅ PHOTO + NAME -->
-            <div class="profileRow">
-              <div class="avatar">
-                <!-- Change profile.jpg to profile.png if needed -->
-                <img src="profile.jpg" alt="Sai Gopinadh Devineni" />
-              </div>
-              <div class="nameBlock">
-                <div class="small">Master’s Graduate • OPT Authorized</div>
-                <div style="font-weight:900; font-size:18px;">Sai Gopinadh Devineni</div>
-              </div>
-            </div>
-
-            <div class="kicker"><span class="dot"></span> Open to Relocation • Entry-Level Roles</div>
-
-            <h1>Software Engineer focused on <span style="background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;">impact</span>, clarity, and shipping.</h1>
-
-            <p class="subtitle">
-              I build practical web apps and support systems. I’ve worked in high-volume operations at Amazon,
-              improved workflows using data, and I’m now targeting entry-level roles in <b>Software Development</b>, <b>IT Support</b>, and <b>Data/Business Analysis</b>.
-            </p>
-
-            <div class="heroActions">
-              <a class="btn btnPrimary" href="#projects">View Projects</a>
-              <a class="btn" href="https://github.com/saigopinadhdevineni-png" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn" href="https://www.linkedin.com/in/sai-gopinadh" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="btn" href="#contact">Contact</a>
-            </div>
-
-            <div class="pillRow">
-              <span class="pill">✅ Fast learner • 20 hrs/week upskilling</span>
-              <span class="pill">✅ Strong communication</span>
-              <span class="pill">✅ Customer-first mindset</span>
-              <span class="pill">✅ Clean code + documentation</span>
-            </div>
-          </div>
-        </div>
-
-        <aside class="card heroRight">
-          <p class="miniTitle">Recruiter snapshot</p>
-          <div class="stats">
-            <div class="stat"><div class="num">1+ yr</div><div class="lbl">Amazon experience</div></div>
-            <div class="stat"><div class="num">50–70+</div><div class="lbl">Cases/day handled</div></div>
-            <div class="stat"><div class="num">95%+</div><div class="lbl">Quality score</div></div>
-            <div class="stat"><div class="num">~20%</div><div class="lbl">Time reduced</div></div>
-          </div>
-
-          <div class="quick">
-            <a href="resume.pdf" download>Resume <span>PDF</span></a>
-            <a href="mailto:saigopinadhdevineni@gmail.com">Email <span>Fast reply</span></a>
-            <a href="https://saigopinadhdevineni-png.github.io/number-checker-app/" target="_blank" rel="noreferrer">Best Project <span>Live demo</span></a>
-          </div>
-        </aside>
-      </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container grid2">
+    <div class="card">
+      <h2>About Me</h2>
+      <p class="subtitle">
+        I’m a Master’s graduate on OPT with experience at Amazon as a Business Analyst.
+        I enjoy working on Java, JavaScript, SQL, and building end-to-end applications.
+      </p>
     </div>
-  </main>
 
-  <!-- REST OF YOUR SECTIONS (keep same as your current file) -->
-  <!-- IMPORTANT: Your photo will show only if profile.jpg exists in repo root -->
-
-  <section id="contact">
-    <div class="container">
-      <div class="sectionHead">
-        <div>
-          <h2>Contact</h2>
-          <p class="sectionNote">One-click recruiter reach out.</p>
-        </div>
-      </div>
-
-      <div class="grid2">
-        <div class="panel">
-          <p style="margin:0; font-weight:850;">Let’s connect</p>
-          <div class="sep"></div>
-          <p style="margin:0;"><b>Email:</b> <a href="mailto:saigopinadhdevineni@gmail.com">saigopinadhdevineni@gmail.com</a></p>
-          <p style="margin:10px 0 0;"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sai-gopinadh" target="_blank" rel="noreferrer">linkedin.com/in/sai-gopinadh</a></p>
-          <p style="margin:10px 0 0;"><b>GitHub:</b> <a href="https://github.com/saigopinadhdevineni-png" target="_blank" rel="noreferrer">github.com/saigopinadhdevineni-png</a></p>
-        </div>
-      </div>
+    <div class="card">
+      <h2>Target Roles</h2>
+      <ul>
+        <li>Entry-Level Software Engineer</li>
+        <li>IT Support Engineer</li>
+        <li>Support / Business Analyst</li>
+        <li>Data Analyst (Junior)</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;">
-      <div>© <span id="year"></span> Sai Gopinadh Devineni</div>
-      <div style="font-family:var(--mono); font-size:12px;">Built with pure HTML/CSS</div>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container grid2">
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Java, JavaScript</li>
+        <li>HTML, CSS</li>
+        <li>SQL, REST APIs</li>
+        <li>Git, GitHub</li>
+      </ul>
     </div>
-  </footer>
 
-  <script>
-    const root = document.documentElement;
-    const themeBtn = document.getElementById('themeBtn');
-    const themeIcon = document.getElementById('themeIcon');
+    <div class="card">
+      <h2>Professional Skills</h2>
+      <ul>
+        <li>Ticket Handling & RCA</li>
+        <li>Customer Support</li>
+        <li>Process Improvement</li>
+        <li>Stakeholder Communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    function setTheme(mode){
-      root.setAttribute('data-theme', mode);
-      localStorage.setItem('theme', mode);
-      themeIcon.textContent = mode === 'light' ? '☀️' : '🌙';
-    }
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container grid2">
+    <div class="card">
+      <h2>Number Checker App</h2>
+      <p class="subtitle">JavaScript app to check even/odd and positive/negative numbers.</p>
+      <a class="btn" href="https://saigopinadhdevineni-png.github.io/number-checker-app/" target="_blank">Live Demo</a>
+    </div>
 
-    const saved = localStorage.getItem('theme');
-    if(saved){ setTheme(saved); }
-    else{
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      setTheme(prefersLight ? 'light' : 'dark');
-    }
+    <div class="card">
+      <h2>To-Do List App</h2>
+      <p class="subtitle">Task manager with localStorage support.</p>
+      <a class="btn" href="https://github.com/saigopinadhdevineni-png" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
 
-    themeBtn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') || 'dark';
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="card">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <b>Business Analyst – Amazon</b> (Aug 2022 – Jul 2023)  
+          <br>Handled 50–70+ cases/day with 95%+ quality score and improved process efficiency by ~20%.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:saigopinadhdevineni@gmail.com">saigopinadhdevineni@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-gopinadh" target="_blank">linkedin.com/in/sai-gopinadh</a></p>
+      <p>GitHub: <a href="https://github.com/saigopinadhdevineni-png" target="_blank">github.com/saigopinadhdevineni-png</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Sai Gopinadh Devineni
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
