@@ -16,14 +16,12 @@
     :root{
       --bg: #0b1220;
       --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.10);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
       --border: rgba(255,255,255,0.14);
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
       --accent: #6ee7ff;
       --accent2: #a78bfa;
-      --good: #34d399;
       --chip: rgba(110,231,255,0.12);
       --chip2: rgba(167,139,250,0.12);
       --radius: 16px;
@@ -36,7 +34,6 @@
     [data-theme="light"]{
       --bg: #f7f8fb;
       --panel: rgba(10, 37, 64, 0.05);
-      --panel2: rgba(10, 37, 64, 0.08);
       --text: rgba(10, 16, 28, 0.92);
       --muted: rgba(10, 16, 28, 0.70);
       --border: rgba(10, 16, 28, 0.12);
@@ -59,6 +56,7 @@
     a{color:inherit; text-decoration:none}
     .container{max-width:var(--maxw); margin:0 auto; padding: 0 20px;}
 
+    /* NAV */
     .navWrap{
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(12px);
@@ -124,6 +122,7 @@
     }
     .btnIcon{width: 40px; height: 40px; padding: 0; border-radius: 14px;}
 
+    /* HERO */
     .hero{padding: 54px 0 20px;}
     .heroGrid{display:grid; grid-template-columns: 1.6fr 1fr; gap: 22px; align-items: stretch;}
     @media (max-width: 920px){.heroGrid{grid-template-columns: 1fr;}}
@@ -174,6 +173,7 @@
     }
     .quick span{color: var(--muted); font-weight: 600; font-size: 13px;}
 
+    /* SECTIONS */
     section{padding: 26px 0;}
     .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap: 12px; margin: 12px 0 14px;}
     h2{margin:0; font-size: 22px; letter-spacing: -0.4px;}
@@ -234,18 +234,8 @@
       margin-top: 8px;
     }
 
-    .contactGrid{display:grid; grid-template-columns: 1.3fr 1fr; gap: 14px;}
-    @media (max-width: 900px){.contactGrid{grid-template-columns: 1fr;}}
-    textarea{
-      width: 100%; padding: 12px 12px; border-radius: 14px;
-      border: 1px solid var(--border); background: rgba(255,255,255,0.04);
-      color: var(--text); outline: none; font-size: 14px; font-family: var(--sans);
-      min-height: 140px; resize: vertical;
-    }
-    textarea:focus{box-shadow: var(--ring); border-color: rgba(110,231,255,0.35);}
-    .hint{color: var(--muted); font-size: 13px; margin: 10px 0 0;}
+    .contactGrid{display:grid; grid-template-columns: 1fr; gap: 14px;}
     .footer{padding: 34px 0 42px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 20px;}
-    .sep{height: 1px; background: var(--border); margin: 18px 0;}
   </style>
 
   <script type="application/ld+json">
@@ -334,10 +324,6 @@
             <a href="mailto:saigopinadhdevineni@gmail.com">Email <span>Fast reply</span></a>
             <a href="https://saigopinadhdevineni-png.github.io/number-checker-app/" target="_blank" rel="noreferrer">Best Project <span>Live demo</span></a>
           </div>
-
-          <p class="hint">
-            Tip: Keep resume updated (PDF) and add 2–3 strong projects with Live Demo + GitHub.
-          </p>
         </aside>
       </div>
     </div>
@@ -348,9 +334,7 @@
       <div class="sectionHead">
         <div>
           <h2>About</h2>
-          <p class="sectionNote">
-            Clear role + measurable impact + strong projects = recruiter-level portfolio.
-          </p>
+          <p class="sectionNote">Clear role + measurable impact + strong projects = recruiter-level portfolio.</p>
         </div>
       </div>
 
@@ -433,9 +417,7 @@
             <h3>Number Checker App</h3>
             <span class="badge">JavaScript • DOM</span>
           </div>
-          <p>
-            Instant checks for even/odd and positive/negative with input validation and clean UI.
-          </p>
+          <p>Instant checks for even/odd and positive/negative with input validation and clean UI.</p>
           <div class="projLinks">
             <a class="link" href="https://saigopinadhdevineni-png.github.io/number-checker-app/" target="_blank" rel="noreferrer">Live Demo</a>
             <a class="link" href="https://github.com/saigopinadhdevineni-png/number-checker-app" target="_blank" rel="noreferrer">GitHub</a>
@@ -447,12 +429,10 @@
             <h3>To-Do List (localStorage)</h3>
             <span class="badge">JavaScript • Storage</span>
           </div>
-          <p>
-            Task manager with persistent localStorage, add/delete tasks, and clean UX.
-          </p>
+          <p>Task manager with persistent localStorage, add/delete tasks, and clean UX.</p>
           <div class="projLinks">
             <a class="link" href="https://github.com/saigopinadhdevineni-png" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="link" href="#contact">Request Demo</a>
+            <a class="link" href="#contact">Contact</a>
           </div>
         </article>
 
@@ -461,19 +441,13 @@
             <h3>Service Booking App (MVP)</h3>
             <span class="badge">Java • CRUD</span>
           </div>
-          <p>
-            Concept MVP: hourly labor booking with worker profiles, pricing, and booking flow (add once completed).
-          </p>
+          <p>Concept MVP: hourly labor booking with worker profiles, pricing, and booking flow.</p>
           <div class="projLinks">
             <a class="link" href="https://github.com/saigopinadhdevineni-png" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="link" href="#contact">Discuss MVP</a>
+            <a class="link" href="#contact">Contact</a>
           </div>
         </article>
       </div>
-
-      <p class="hint">
-        To make this “FAANG-level”, add one project with: API + CRUD + auth + deployment.
-      </p>
     </div>
   </section>
 
@@ -503,21 +477,6 @@
             <li>Owned escalations end-to-end, ensuring accurate documentation and follow-through.</li>
           </ul>
         </div>
-
-        <div class="role">
-          <div class="roleHead">
-            <div>
-              <p class="roleTitle">Projects & Upskilling</p>
-              <p class="roleMeta">USA • Remote</p>
-              <span class="impact">Consistent shipping</span>
-            </div>
-            <div class="roleTime">2024 — Present</div>
-          </div>
-          <ul>
-            <li>Building deployable projects and improving fundamentals in Java, JavaScript, and SQL.</li>
-            <li>Focused on writing cleaner code, better UI, and clearer documentation for recruiters.</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -534,38 +493,13 @@
       <div class="contactGrid">
         <div class="panel">
           <p style="margin:0; font-weight:850;">Let’s connect</p>
-          <p class="sectionNote" style="margin-top:8px;">
-            Email is best. Send the role + job link and I’ll respond quickly.
-          </p>
+          <p class="sectionNote" style="margin-top:8px;">Email is best.</p>
 
           <div class="sep"></div>
 
           <p style="margin:0;"><b>Email:</b> <a href="mailto:saigopinadhdevineni@gmail.com">saigopinadhdevineni@gmail.com</a></p>
           <p style="margin:10px 0 0;"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sai-gopinadh" target="_blank" rel="noreferrer">linkedin.com/in/sai-gopinadh</a></p>
           <p style="margin:10px 0 0;"><b>GitHub:</b> <a href="https://github.com/saigopinadhdevineni-png" target="_blank" rel="noreferrer">github.com/saigopinadhdevineni-png</a></p>
-
-          <p class="hint" style="margin-top:14px;">
-            Add <b>resume.pdf</b> to the same folder as this index.html so the Resume button works.
-          </p>
-        </div>
-
-        <div class="panel">
-          <p style="margin:0; font-weight:850;">Recruiter message (copy)</p>
-          <p class="hint" style="margin-top:8px;">Click copy and paste to LinkedIn / email.</p>
-
-          <textarea readonly id="msgBox">Hi [Name], I’m Sai Gopinadh Devineni (Master’s graduate, OPT). I’m interested in the [Role] position. I have experience at Amazon as a Business Analyst (95%+ quality, 50–70+ cases/day, workflow improvements) and I’m building projects in Java/JavaScript/SQL with live demos.
-
-Could you please share the best next step or referral process? Portfolio: https://saigopinadhdevineni.com
-
-Thank you,
-Sai</textarea>
-
-          <div class="heroActions" style="margin-top:12px;">
-            <button class="btn btnPrimary" id="copyBtn" type="button">📋 Copy Message</button>
-            <a class="btn" href="mailto:saigopinadhdevineni@gmail.com?subject=Application%20-%20[Role]%20-%20Sai%20Gopinadh%20Devineni" target="_blank" rel="noreferrer">✉️ Email</a>
-          </div>
-
-          <p class="hint" id="copyHint" aria-live="polite" style="margin-top:10px;"></p>
         </div>
       </div>
     </div>
@@ -600,22 +534,6 @@ Sai</textarea>
     themeBtn.addEventListener('click', () => {
       const current = root.getAttribute('data-theme') || 'dark';
       setTheme(current === 'dark' ? 'light' : 'dark');
-    });
-
-    const copyBtn = document.getElementById('copyBtn');
-    const msgBox = document.getElementById('msgBox');
-    const copyHint = document.getElementById('copyHint');
-
-    copyBtn.addEventListener('click', async () => {
-      try{
-        await navigator.clipboard.writeText(msgBox.value);
-        copyHint.textContent = "Copied ✅ Paste it in LinkedIn/Email.";
-      }catch(e){
-        msgBox.select();
-        document.execCommand('copy');
-        copyHint.textContent = "Copied ✅ (fallback mode).";
-      }
-      setTimeout(()=> copyHint.textContent = "", 2200);
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
