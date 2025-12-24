@@ -131,7 +131,6 @@
       position:absolute; inset:-40px;
       background: radial-gradient(350px 240px at 30% 10%, rgba(96,165,250,0.18), transparent 60%),
                   radial-gradient(260px 220px at 80% 40%, rgba(34,197,94,0.14), transparent 60%);
-      filter: blur(0px);
       pointer-events:none;
     }
     .profile > *{position:relative}
@@ -149,6 +148,7 @@
       width:100%;
       height:100%;
       object-fit:cover;
+      object-position: center top; /* helps keep face clear */
       display:block;
       image-rendering: auto;
     }
@@ -255,6 +255,7 @@
       background: rgba(255,255,255,0.04);
       color: rgba(229,231,235,0.92);
       font-size:13px;
+      word-break: break-word;
     }
 
     /* Experience + Projects */
@@ -311,20 +312,57 @@
       border-radius: var(--radius);
     }
 
-    /* Responsive */
+    /* Responsive (IMPROVED MOBILE) */
     @media (max-width: 900px){
-      .hero{grid-template-columns: 1fr; }
-      .brand{min-width:auto}
-      .avatar{width: 150px; height:150px; border-radius: 20px;}
-      h1{font-size:30px}
-      .grid{grid-template-columns: 1fr}
+      .hero{ grid-template-columns: 1fr; }
+      .brand{ min-width:auto }
+      .grid{ grid-template-columns: 1fr }
+      h1{ font-size:30px }
     }
-    @media (max-width: 520px){
-      .nav-inner{gap:10px}
-      .nav-links{display:none}
-      .avatar{width: 140px; height:140px;}
-      h1{font-size:28px}
-      .btn{padding:10px 12px}
+
+    @media (max-width: 600px){
+      .wrap{ padding:16px 14px 56px; }
+
+      .nav-inner{ padding:10px 14px; gap:10px; }
+      .nav-links{ display:none; }
+
+      .hero{ gap:14px; margin-top:14px; }
+
+      /* center for mobile toggle */
+      .profile{
+        align-items:center;
+        text-align:center;
+      }
+
+      .avatar{
+        width: 160px;
+        height: 160px;
+        border-radius: 22px;
+      }
+
+      h1{ font-size:26px; }
+      .headline{ font-size:14px; }
+
+      .impact li{ font-size:14px; }
+
+      /* Buttons full width */
+      .hero-actions, .proj-links, .nav-cta{
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn{
+        width:100%;
+        justify-content:center;
+      }
+
+      .chips{ gap:8px; }
+      .chip{
+        font-size:12.5px;
+        padding:8px 10px;
+      }
+
+      .item{ padding:12px; }
+      .item ul{ padding-left:18px; }
     }
   </style>
 </head>
@@ -430,7 +468,7 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE (UPDATED: Amazon + Other Roles) -->
+    <!-- EXPERIENCE -->
     <section class="card section" id="experience" style="margin-top:16px;">
       <h2>Experience</h2>
       <p class="sub">Impact first (numbers + outcomes).</p>
