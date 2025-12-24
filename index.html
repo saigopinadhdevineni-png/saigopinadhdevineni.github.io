@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
   <title>Sai Gopinadh Devineni | Portfolio</title>
 
   <!-- Google Font -->
@@ -13,13 +14,18 @@
   <style>
     :root{
       --bg: #0b1220;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.08);
-      --text: #e5e7eb;
-      --muted: #a7b0c0;
-      --border: rgba(255,255,255,0.12);
+
+      /* Desktop panels (slightly transparent) */
+      --panel: rgba(255,255,255,0.08);
+      --panel2: rgba(255,255,255,0.10);
+
+      --text: #f3f4f6;
+      --muted: #b6c0d1;
+      --border: rgba(255,255,255,0.14);
+
       --accent: #60a5fa; /* blue */
       --accent2: #22c55e; /* green */
+
       --shadow: 0 18px 60px rgba(0,0,0,0.45);
       --radius: 18px;
     }
@@ -45,8 +51,8 @@
     .nav{
       position:sticky; top:0; z-index:20;
       backdrop-filter: blur(12px);
-      background: rgba(11,18,32,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(11,18,32,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
     }
     .nav-inner{
       max-width:1100px; margin:0 auto;
@@ -61,9 +67,10 @@
     .brand-badge{
       width:10px; height:10px; border-radius:50%;
       background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(96,165,250,0.12);
+      box-shadow: 0 0 0 4px rgba(96,165,250,0.14);
     }
     .brand strong{font-weight:800; letter-spacing:0.2px}
+
     .nav-links{
       display:flex; align-items:center; gap:14px;
       flex-wrap:wrap;
@@ -76,30 +83,35 @@
     }
     .nav-links a:hover{
       color:var(--text);
-      border-color: rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
     }
+
     .nav-cta{
       display:flex; align-items:center; gap:10px;
     }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:8px;
       padding:10px 14px;
       border-radius:14px;
       font-weight:600;
-      border:1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
       color:var(--text);
-      box-shadow: none;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
       font-size:14px;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.22)}
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.24);
+    }
     .btn.primary{
-      border-color: rgba(96,165,250,0.55);
-      background: linear-gradient(135deg, rgba(96,165,250,0.28), rgba(96,165,250,0.10));
+      border-color: rgba(96,165,250,0.70);
+      background: linear-gradient(135deg, rgba(96,165,250,0.32), rgba(96,165,250,0.12));
     }
 
     /* Hero */
@@ -110,6 +122,7 @@
       gap:22px;
       align-items:stretch;
     }
+
     .card{
       background: var(--panel);
       border: 1px solid var(--border);
@@ -129,7 +142,7 @@
     .profile::before{
       content:"";
       position:absolute; inset:-40px;
-      background: radial-gradient(350px 240px at 30% 10%, rgba(96,165,250,0.18), transparent 60%),
+      background: radial-gradient(350px 240px at 30% 10%, rgba(96,165,250,0.20), transparent 60%),
                   radial-gradient(260px 220px at 80% 40%, rgba(34,197,94,0.14), transparent 60%);
       pointer-events:none;
     }
@@ -139,8 +152,8 @@
       width: 170px;
       height: 170px;
       border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.08);
       box-shadow: 0 16px 40px rgba(0,0,0,0.45);
       overflow:hidden;
     }
@@ -148,9 +161,8 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position: center top; /* helps keep face clear */
+      object-position:center top;
       display:block;
-      image-rendering: auto;
     }
 
     .quick{
@@ -163,13 +175,13 @@
       color: var(--muted);
       padding:9px 10px;
       border-radius: 14px;
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
     }
     .dot{
       width:8px; height:8px; border-radius:999px;
       background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(34,197,94,0.10);
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.12);
       flex:0 0 auto;
     }
 
@@ -201,25 +213,25 @@
     }
     .badge{
       font-size:12px;
-      color: rgba(229,231,235,0.95);
-      border:1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
+      color: rgba(243,244,246,0.96);
+      border:1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
       padding:7px 10px;
       border-radius:999px;
     }
     .badge.accent{
-      border-color: rgba(96,165,250,0.55);
-      background: rgba(96,165,250,0.12);
-      color: rgba(229,231,235,0.98);
+      border-color: rgba(96,165,250,0.70);
+      background: rgba(96,165,250,0.14);
+      color: rgba(243,244,246,0.98);
     }
 
     .impact{
       margin:0;
       padding-left:18px;
-      color: var(--text);
+      color: rgba(243,244,246,0.96);
     }
-    .impact li{margin:6px 0; color: rgba(229,231,235,0.92)}
-    .impact strong{color: #ffffff}
+    .impact li{margin:6px 0}
+    .impact strong{color:#ffffff}
 
     .hero-actions{
       display:flex; gap:12px; flex-wrap:wrap;
@@ -233,9 +245,7 @@
       grid-template-columns: 1fr 1fr;
       gap:16px;
     }
-    .section{
-      padding:18px;
-    }
+    .section{ padding:18px; }
     .section h2{
       margin:0 0 10px 0;
       font-size:16px;
@@ -251,9 +261,9 @@
     .chip{
       padding:9px 11px;
       border-radius: 999px;
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: rgba(229,231,235,0.92);
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(243,244,246,0.94);
       font-size:13px;
       word-break: break-word;
     }
@@ -263,8 +273,8 @@
     .item{
       padding:14px;
       border-radius: 16px;
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
     }
     .item-top{
       display:flex; align-items:flex-start; justify-content:space-between;
@@ -274,6 +284,7 @@
     .role{
       font-weight:700;
       margin:0;
+      color:#ffffff;
     }
     .meta{
       margin:4px 0 0 0;
@@ -283,8 +294,8 @@
     .when{
       color: var(--muted);
       font-size:13px;
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
       padding:7px 10px;
       border-radius:999px;
       white-space:nowrap;
@@ -292,7 +303,7 @@
     .item ul{
       margin:10px 0 0 0;
       padding-left:18px;
-      color: rgba(229,231,235,0.92);
+      color: rgba(243,244,246,0.94);
     }
     .item li{margin:6px 0}
 
@@ -308,11 +319,11 @@
       text-align:center;
       color: var(--muted);
       border:1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.05);
       border-radius: var(--radius);
     }
 
-    /* Responsive (IMPROVED MOBILE) */
+    /* Responsive */
     @media (max-width: 900px){
       .hero{ grid-template-columns: 1fr; }
       .brand{ min-width:auto }
@@ -320,7 +331,22 @@
       h1{ font-size:30px }
     }
 
+    /* ✅ Mobile clarity fix */
     @media (max-width: 600px){
+      /* Remove heavy gradients on mobile and increase contrast */
+      body{ background: var(--bg); }
+
+      /* Solid cards on mobile (clear readable) */
+      .card{
+        background: rgba(17, 24, 39, 0.94); /* solid dark */
+        border-color: rgba(255,255,255,0.14);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.55);
+      }
+      .item{
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.14);
+      }
+
       .wrap{ padding:16px 14px 56px; }
 
       .nav-inner{ padding:10px 14px; gap:10px; }
@@ -328,17 +354,9 @@
 
       .hero{ gap:14px; margin-top:14px; }
 
-      /* center for mobile toggle */
-      .profile{
-        align-items:center;
-        text-align:center;
-      }
-
-      .avatar{
-        width: 160px;
-        height: 160px;
-        border-radius: 22px;
-      }
+      /* Profile centered on mobile for best look */
+      .profile{ align-items:center; text-align:center; }
+      .avatar{ width: 160px; height: 160px; }
 
       h1{ font-size:26px; }
       .headline{ font-size:14px; }
@@ -350,19 +368,17 @@
         flex-direction: column;
         align-items: stretch;
       }
-      .btn{
-        width:100%;
-        justify-content:center;
-      }
+      .btn{ width:100%; justify-content:center; }
 
+      /* Chips readable */
       .chips{ gap:8px; }
-      .chip{
-        font-size:12.5px;
-        padding:8px 10px;
-      }
+      .chip{ font-size:13px; padding:9px 11px; }
+
+      /* Meta text slightly bigger */
+      .meta{ font-size:14px; }
+      .when{ font-size:13px; }
 
       .item{ padding:12px; }
-      .item ul{ padding-left:18px; }
     }
   </style>
 </head>
@@ -475,7 +491,6 @@
 
       <div class="list">
 
-        <!-- Amazon -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -493,7 +508,6 @@
           </ul>
         </div>
 
-        <!-- Deccan Info Systems -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -509,7 +523,6 @@
           </ul>
         </div>
 
-        <!-- AmpleLogic -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -524,7 +537,6 @@
           </ul>
         </div>
 
-        <!-- AKT Software Solutions -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -538,7 +550,6 @@
           </ul>
         </div>
 
-        <!-- Sisira Consulting Services -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -561,7 +572,6 @@
       <p class="sub">Clean code + recruiter focused links.</p>
 
       <div class="list">
-        <!-- Number Checker App -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -579,7 +589,6 @@
           </div>
         </div>
 
-        <!-- To-Do List App -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -596,7 +605,6 @@
           </div>
         </div>
 
-        <!-- Hourly Labor Booking -->
         <div class="item">
           <div class="item-top">
             <div>
