@@ -268,7 +268,7 @@
       word-break: break-word;
     }
 
-    /* Experience + Projects */
+    /* Experience + Projects + Courses */
     .list{display:flex; flex-direction:column; gap:12px}
     .item{
       padding:14px;
@@ -310,6 +310,22 @@
     .proj-links{
       display:flex; gap:10px; flex-wrap:wrap;
       margin-top:10px;
+    }
+
+    /* ✅ Tags (for Courses) */
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(243,244,246,0.92);
     }
 
     /* Footer */
@@ -390,6 +406,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#courses">Courses</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -437,7 +454,7 @@
       </div>
     </section>
 
-    <!-- ✅ ABOUT (ADDED) -->
+    <!-- ABOUT -->
     <section class="card section" id="about" style="margin-top:16px;">
       <h2>About</h2>
       <p class="sub">
@@ -473,7 +490,8 @@
           <span class="chip">CSV / Data Files</span>
         </div>
       </div>
-<div class="card section">
+
+      <div class="card section">
         <h2>Focus</h2>
         <p class="sub">What I bring to teams.</p>
         <div class="list">
@@ -489,7 +507,7 @@
       </div>
     </section>
 
-    <!-- ✅ EDUCATION (CLEANED) -->
+    <!-- EDUCATION -->
     <section class="card section" id="education" style="margin-top:16px;">
       <h2>Education</h2>
       <p class="sub">Academic background.</p>
@@ -509,7 +527,7 @@
           <div class="item-top">
             <div>
               <p class="role">Bachelor’s — Mechanical Engineering</p>
-              <p class="meta">Jawaharlal Nehru Technological University Hyderabad• India</p>
+              <p class="meta">Jawaharlal Nehru Technological University Hyderabad • India</p>
             </div>
             <div class="when">2015 – 2019</div>
           </div>
@@ -568,17 +586,15 @@
             <li>Built dashboards and reports to deliver business insights and tracking.</li>
           </ul>
         </div>
+      </div>
+    </section>
 
     <!-- PROJECTS -->
     <section class="card section" id="projects" style="margin-top:16px;">
       <h2>Projects</h2>
-      <p class="sub">Clean code </p>
+      <p class="sub">Clean code</p>
 
       <div class="list">
-
-        <!-- ✅ REORDERED: BEST PROJECTS FIRST -->
-
-        <!-- ✅ SUPPORT ANALYTICS DASHBOARD -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -596,7 +612,6 @@
           </div>
         </div>
 
-        <!-- ✅ E-COMMERCE SALES & PROFIT ANALYSIS -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -615,7 +630,6 @@
           </div>
         </div>
 
-        <!-- ✅ HOURLY LABOR BOOKING -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -634,7 +648,6 @@
           </div>
         </div>
 
-        <!-- ✅ Smart Expense Tracker (ADDED) -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -653,7 +666,6 @@
           </div>
         </div>
 
-        <!-- To-Do -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -671,7 +683,6 @@
           </div>
         </div>
 
-        <!-- Number Checker -->
         <div class="item">
           <div class="item-top">
             <div>
@@ -688,34 +699,153 @@
             <a class="btn" href="https://github.com/saigopinadhdevineni-png/number-checker-app" target="_blank" rel="noopener">Code</a>
           </div>
         </div>
-
       </div>
     </section>
 
-<!-- ================= ACHIEVEMENTS (ADDED) ================= -->
+    <!-- ✅ COURSES (NO LINKS) -->
+    <section class="card section" id="courses" style="margin-top:16px;">
+      <h2>Courses</h2>
+      <p class="sub">Coursework aligned to Business Analyst, Data Analyst, and Support Analyst roles.</p>
+
+      <div class="list">
         <div class="item">
           <div class="item-top">
             <div>
-              <p class="role">Key Achievements</p>
-              <p class="meta">Leadership • Customer Experience • Ownership</p>
+              <p class="role">SQL for Data Science</p>
+              <p class="meta">Query writing, joins, filtering, aggregation, data extraction for reporting</p>
             </div>
-            <div class="when">Professional Impact</div>
+            <div class="when">Coursework</div>
           </div>
-
-          <ul>
-            <li>
-              Trained and supported new hires, improving onboarding efficiency and ensuring adherence to quality and SLA standards.
-            </li>
-            <li>
-              Contributed to improved CSAT scores through effective communication, accurate issue diagnosis, and first-contact resolution.
-            </li>
-            <li>
-              Managed high-severity and priority escalations, ensuring proper documentation, follow-ups, and customer satisfaction.
-            </li>
-          </ul>
+          <p class="meta" style="margin-top:10px;">
+            Built strong SQL fundamentals for analytics: translating business questions into SQL, producing insight-ready datasets,
+            and writing clean, efficient queries for reporting and decision-making.
+          </p>
+          <div class="tags">
+            <span class="tag">SQL</span><span class="tag">Analytics</span><span class="tag">Reporting</span>
+          </div>
         </div>
-        <!-- ================= END ACHIEVEMENTS ================= -->
-        
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Excel Skills for Business</p>
+              <p class="meta">Functions, professional reports, charts, dashboard-style summaries</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Strengthened business Excel skills for reporting: formulas/functions, clean formatting, charts, and structured
+            summaries that support stakeholder updates and KPI tracking.
+          </p>
+          <div class="tags">
+            <span class="tag">Excel</span><span class="tag">Dashboards</span><span class="tag">KPIs</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Business Analysis Fundamentals</p>
+              <p class="meta">Requirements, stakeholder communication, documentation, Agile/Waterfall basics</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Learned core BA practices: requirement elicitation, stakeholder communication, documenting needs clearly,
+            and supporting delivery across Agile and Waterfall workflows.
+          </p>
+          <div class="tags">
+            <span class="tag">Requirements</span><span class="tag">Stakeholders</span><span class="tag">Process</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Google Data Analytics (Coursework)</p>
+              <p class="meta">Data cleaning, analysis workflow, dashboards, communicating insights</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Covered the end-to-end analytics workflow: cleaning/organizing data, analyzing with spreadsheets/SQL,
+            and communicating insights clearly through dashboards and storytelling.
+          </p>
+          <div class="tags">
+            <span class="tag">Data Cleaning</span><span class="tag">SQL</span><span class="tag">Insights</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Power BI / Data Visualization</p>
+              <p class="meta">Data prep, modeling basics, building interactive dashboards</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Built BI reporting skills: preparing data for analysis, creating interactive dashboards, and presenting KPIs in a clear,
+            stakeholder-friendly format.
+          </p>
+          <div class="tags">
+            <span class="tag">Power BI</span><span class="tag">Dashboards</span><span class="tag">Storytelling</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Agile & Jira Fundamentals</p>
+              <p class="meta">Scrum/Kanban basics, backlog workflows, delivery tracking concepts</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Learned Agile fundamentals and how teams track delivery: backlogs, workflows, prioritization, and sprint/board concepts
+            used in Jira-style project environments.
+          </p>
+          <div class="tags">
+            <span class="tag">Agile</span><span class="tag">Jira</span><span class="tag">Delivery</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">Git & GitHub</p>
+              <p class="meta">Version control, repositories, clean commits, collaboration basics</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Learned professional version control workflows: managing repositories, tracking changes with commits,
+            and organizing projects on GitHub for clean delivery and collaboration.
+          </p>
+          <div class="tags">
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Workflow</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <p class="role">JavaScript Fundamentals</p>
+              <p class="meta">DOM manipulation, logic building, interactive mini apps</p>
+            </div>
+            <div class="when">Coursework</div>
+          </div>
+          <p class="meta" style="margin-top:10px;">
+            Strengthened JavaScript foundations to build portfolio projects: working with the DOM, user input handling,
+            core logic, and creating interactive web apps.
+          </p>
+          <div class="tags">
+            <span class="tag">JavaScript</span><span class="tag">DOM</span><span class="tag">Projects</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="card section" id="contact" style="margin-top:16px;">
       <h2>Contact</h2>
@@ -738,3 +868,4 @@
   </script>
 </body>
 </html>
+
