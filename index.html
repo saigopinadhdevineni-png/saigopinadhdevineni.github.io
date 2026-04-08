@@ -1,260 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gopi Chowdary | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gopi Chowdary | Guidewire BA & Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #020617;
+    }
 
-body {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: #e2e8f0;
-  overflow-x: hidden;
-}
+    header h1 {
+      font-size: 2.8rem;
+      color: #38bdf8;
+    }
 
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(2,6,23,0.7);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-  z-index: 1000;
-}
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
 
-nav a {
-  color: #94a3b8;
-  text-decoration: none;
-  transition: 0.3s;
-}
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-nav a:hover {
-  color: #38bdf8;
-}
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #0f172a, #020617);
-  text-align: center;
-}
+    .card {
+      background: #020617;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #38bdf8;
-}
+    ul {
+      line-height: 1.7;
+    }
 
-.typing {
-  margin-top: 10px;
-  font-size: 1.3rem;
-  color: #94a3b8;
-}
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 6px;
+    }
 
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
 
-h2 {
-  color: #38bdf8;
-  margin-bottom: 30px;
-  text-align: center;
-}
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
 
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.01);
-}
-
-/* SKILLS */
-.skills span {
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  background: rgba(56,189,248,0.2);
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.skills span:hover {
-  background: #38bdf8;
-  color: black;
-}
-
-/* ANIMATION */
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-}
-</style>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="hero">
+<header>
   <h1>Gopi Chowdary</h1>
-  <div class="typing" id="typing"></div>
-</div>
+  <p>Senior Guidewire BillingCenter Business Analyst & Data Analyst</p>
+  <p>📧 Gopichowdarydevineni@gmail.com | 📞 +1 7746064800</p>
+</header>
 
-<section id="about" class="hidden">
+<section>
   <h2>About Me</h2>
   <div class="card">
-    Senior Guidewire BillingCenter Business Analyst & Data Analyst with 6+ years of experience in P&C Insurance.
-    I specialize in data-driven decision making, Guidewire implementations, and analytics solutions.
+    <p>
+      I am a Senior Guidewire BillingCenter Business Analyst and Data Analyst with 6+ years of experience in the Property & Casualty insurance domain.
+      I specialize in bridging business requirements with data-driven solutions, delivering scalable systems and actionable insights.
+    </p>
+
+    <p>
+      My expertise includes Guidewire BillingCenter implementation, SQL-based data analysis, and building dashboards using Power BI and Tableau.
+      I have strong experience working with billing, payments, invoicing, and collections data to improve business performance.
+    </p>
+
+    <p>
+      I thrive in Agile environments, collaborating with stakeholders and technical teams to deliver high-quality solutions aligned with business goals.
+    </p>
   </div>
 </section>
 
-<section id="skills" class="hidden">
-  <h2>Skills</h2>
+<section>
+  <h2>Technical Skills</h2>
   <div class="card skills">
     <span>Guidewire BillingCenter</span>
-    <span>SQL</span>
+    <span>PolicyCenter Integration</span>
+    <span>ClaimCenter Integration</span>
+    <span>SQL (Advanced)</span>
     <span>Power BI</span>
     <span>Tableau</span>
+    <span>Python (Basic)</span>
     <span>Snowflake</span>
-    <span>AWS</span>
+    <span>AWS (S3, Redshift)</span>
     <span>REST APIs</span>
+    <span>SOAP</span>
     <span>Gosu</span>
     <span>Jira</span>
+    <span>CI/CD</span>
   </div>
 </section>
 
-<section id="experience" class="hidden">
-  <h2>Experience</h2>
+<section>
+  <h2>Professional Experience</h2>
 
   <div class="card">
-    <h3>Homesite Insurance</h3>
-    <p>Led BillingCenter implementation on cloud, built dashboards, performed SQL analysis, and improved billing insights.</p>
+    <h3>Homesite Insurance (2025 - Present)</h3>
+    <ul>
+      <li>Led Guidewire BillingCenter implementation on Guidewire Cloud Platform.</li>
+      <li>Gathered requirements and translated them into user stories and analytics solutions.</li>
+      <li>Built dashboards using Power BI and Tableau for KPI tracking.</li>
+      <li>Performed advanced SQL analysis to identify revenue and payment trends.</li>
+      <li>Integrated external systems using REST APIs.</li>
+      <li>Worked with Snowflake and AWS for data analytics.</li>
+    </ul>
   </div>
 
   <div class="card">
-    <h3>Nationwide</h3>
-    <p>Worked on billing configuration, dashboards, SQL reporting, and UAT validation.</p>
+    <h3>Nationwide (2024 - 2025)</h3>
+    <ul>
+      <li>Gathered business and data requirements and created BRDs and user stories.</li>
+      <li>Configured billing processes including invoicing and payments.</li>
+      <li>Developed SQL queries for reporting and validation.</li>
+      <li>Built dashboards for business insights.</li>
+      <li>Supported UAT and data validation.</li>
+    </ul>
   </div>
 
   <div class="card">
-    <h3>Accenture</h3>
-    <p>Supported implementation, data validation, and reporting activities.</p>
+    <h3>Accenture (2021 - 2023)</h3>
+    <ul>
+      <li>Supported BillingCenter implementation and reporting.</li>
+      <li>Performed SQL-based data validation and analysis.</li>
+      <li>Assisted in dashboard creation and testing.</li>
+      <li>Worked in Agile environment.</li>
+    </ul>
   </div>
 
 </section>
 
-<section id="projects" class="hidden">
-  <h2>Projects</h2>
+<section>
+  <h2>Projects & Achievements</h2>
   <div class="card">
-    ✔ KPI Dashboard Development <br>
-    ✔ Billing Analytics & Reporting <br>
-    ✔ Cloud Migration (Guidewire Cloud)
+    <ul>
+      <li>Developed KPI dashboards to track billing performance and revenue trends.</li>
+      <li>Improved reporting efficiency by automating data processes.</li>
+      <li>Analyzed delinquency patterns to support business decisions.</li>
+      <li>Contributed to successful cloud migration (Guidewire Cloud Platform).</li>
+    </ul>
   </div>
 </section>
 
-<section id="contact" class="hidden">
+<section>
   <h2>Contact</h2>
   <div class="card">
-    📧 Gopichowdarydevineni@gmail.com <br>
-    📞 +1 7746064800 <br>
-    🔗 Add LinkedIn link
+    <p>Email: <a href="mailto:Gopichowdarydevineni@gmail.com">Gopichowdarydevineni@gmail.com</a></p>
+    <p>Phone: +1 7746064800</p>
+    <p>LinkedIn: <a href="#">Add your LinkedIn link</a></p>
   </div>
 </section>
 
 <footer>
-  © 2026 Gopi Chowdary
+  <p>© 2026 Gopi Chowdary | Portfolio</p>
 </footer>
-
-<script>
-/* Typing Effect */
-const text = [
-  "Guidewire BillingCenter Expert",
-  "Business Analyst",
-  "Data Analyst",
-  "SQL | Power BI | Cloud"
-];
-
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
-
-function type() {
-  currentText = text[i];
-  
-  document.getElementById("typing").textContent =
-    currentText.substring(0, j);
-
-  if (!isDeleting && j < currentText.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
-  } else {
-    isDeleting = !isDeleting;
-    i = !isDeleting ? (i + 1) % text.length : i;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
-
-/* Scroll Animation */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
